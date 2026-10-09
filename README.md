@@ -16,7 +16,7 @@ The input files must be .txt files. Report is generated as .txt file within the 
 1. **Docker:** Installed and running (Docker Desktop on Windows/macOS or Docker Engine on Linux).
 2. **Docker Compose:** Included by default with Docker Desktop, or available via the `docker-compose-plugin`.
 3. **Hardware:** Minimum 8 GB RAM recommended. At least 10 GB of free disk space for the Ollama image, the `gemma3:4b-it-qat` model weights (about 4 GB), and the Python base image layers.
-4**Internet:** Required on the first run only, to download the Ollama image and the model. After that, everything runs locally and offline.
+4 **Internet:** Required on the first run only, to download the Ollama image and the model. After that, everything runs locally and offline.
 
 ### How it works
 1. **Two containers:** Docker Compose starts an `ollama` container (the language model server) and an `app` container (the Gradio web interface). The app starts only once Ollama is ready.
@@ -68,12 +68,21 @@ Generates a `.txt` report with per-chunk analysis including:
 
 ## Files Structure
 - `ErrorDetector.py` - main program, run this to launch the app
-- `CJAL.txt` - authentic paper where human and AI generated text is mixed (for testing)
-- `reportCJAL.txt` - example of error detection report for the `CJAL.txt`
 - `requirements.txt` — Python dependencies
 - `README.md` — this file
 - `app.py` - gradio interface
 
 ## Notes
 - Chunk size is set to **700 characters** for optimal model performance
-- Ollama must be running locally 
+- Ollama must be running locally
+
+- ## License & Attributions
+
+### Repository License
+This project is licensed under the [MIT License](LICENSE) — see the LICENSE file for details.
+
+### Model & Software Attributions
+* **LLM Engine:** Uses [Google Gemma 3](https://ai.google.dev/gemma) (`gemma3:4b-it-qat`). Usage of Gemma model weights is subject to the [Google Gemma Terms of Use](https://ai.google.dev/gemma/terms) and [Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy).
+* **Inference Runtime:** Powered by [Ollama](https://ollama.com) (MIT License).
+* **Web Interface:** Built with [Gradio](https://github.com/gradio-app/gradio) (Apache 2.0 License).
+* 
