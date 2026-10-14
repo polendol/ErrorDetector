@@ -14,9 +14,9 @@
 |---|---|---|---|
 | Runs on your machine through Ollama | Errors, fixes and a corrected text for every chunk | Web app and terminal script | Docker Compose with app + Ollama |
 
-<!-- Add a screenshot of the web interface here, e.g. <img src="demo.png" alt="English Error Detector web interface" width="800"> -->
+<img src="demo4.png" alt="AI Abstract Generator web interface" width="800">
 
----
+
 
 ## 💡 Overview
 
